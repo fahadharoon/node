@@ -21,8 +21,11 @@ jobs:
         
       - name: Run a one-line script
         run: |
+          mkdir package_artifact
           ls
           pwd
+          
+          
         
 #       - name: Run a multi-line script
 #         run: |
