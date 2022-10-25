@@ -20,9 +20,16 @@ jobs:
         run: echo Hello, world!
         
       - name: Run a one-line script
-        run: ls  
-        
-      - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          ls
+          pwd
+        
+#       - name: Run a multi-line script
+#         run: |
+#           echo Add other actions to build,
+#           echo test, and deploy your project.
+          
+#       - name: Create artifact files
+#         run: |
+#           mkdir package_zip
+          
