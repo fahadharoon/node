@@ -21,9 +21,11 @@ jobs:
         
       - name: Run a one-line script
         run: |
-          mkdir package_artifact
+          mkdir /home/runner/package_artifact
           ls
           pwd
+          cp -r /home/runner/work/node/node/* /home/runner/package_artifact
+          ls
           
           
         
