@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test on Windows') {
             agent {
-                label 'windows'
+                label 'farazpc'
             }
             steps {
                 bat '''
