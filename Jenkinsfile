@@ -1,20 +1,15 @@
 pipeline {
-    agent any
-
+    agent none
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
+        stage('Test on Windows') {
+            agent {
+                label 'windows'
             }
-        }
-        stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                bat '''
+                    git clone https://github.com/fahadharoon/node.git;
+                    dir
+                '''
             }
         }
     }
